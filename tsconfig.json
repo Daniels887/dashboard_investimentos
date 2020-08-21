@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "es5",
+    "esModuleInterop": true
+  },
+  "include": ["src", "typings", "__tests__", "storybook/stories"]
+}
