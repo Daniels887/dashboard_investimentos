@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { hot } from 'react-hot-loader/root'
+import theme from './styles/theme'
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import MenuDashboard from './components/Menu'
-import theme from './styles/theme'
+import Header from './components/Header'
 
 const App: React.FC = () => {
   return (
@@ -12,12 +13,12 @@ const App: React.FC = () => {
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Grid container>
-          <Grid item xs={12} md={1}>
+          <Grid item xs={12} md={2} lg={1}>
             <MenuDashboard />
           </Grid>
-          <Grid item xs={12} md={11}>
-            <Box border={1} height={{ md: '100vh' }}>
-              b
+          <Grid item xs={12} md={10} lg={11}>
+            <Box height={{ md: '100vh' }}>
+              <Header />
             </Box>
           </Grid>
         </Grid>
