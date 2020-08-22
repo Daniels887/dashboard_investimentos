@@ -2,7 +2,7 @@ import { responsiveFontSizes, createMuiTheme } from '@material-ui/core'
 import { KeyboardArrowDown } from '@material-ui/icons'
 
 const custom = {
-  primaryMinus: '##04daf4',
+  primaryMinus: '#04daf4',
   primary: '#0199fe',
   primaryPlus: '#3449d6',
   primaryContrast: '#0d093b',

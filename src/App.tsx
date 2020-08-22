@@ -2,10 +2,10 @@ import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import theme from './styles/theme'
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
+import { Grid, Box } from '@material-ui/core'
 import MenuDashboard from './components/Menu'
 import Header from './components/Header'
+import Infos from './components/Infos'
 
 const App: React.FC = () => {
   return (
@@ -17,8 +17,9 @@ const App: React.FC = () => {
             <MenuDashboard />
           </Grid>
           <Grid item xs={12} md={10} lg={11}>
-            <Box height={{ md: '100vh' }}>
+            <Box>
               <Header />
+              <Infos />
             </Box>
           </Grid>
         </Grid>
