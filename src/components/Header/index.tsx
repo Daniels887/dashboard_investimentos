@@ -35,7 +35,7 @@ const MyBadge = withStyles({
 
 const StyledButton = withStyles({
   root: {
-    background: theme.palette.primary.contrastText,
+    background: theme.palette.primary.dark,
     borderTopLeftRadius: 32,
     borderBottomLeftRadius: 32,
     border: 0,
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
                     <Box display="flex" alignItems="baseline">
                       <Avatar
                         style={{
-                          background: theme.palette.primary.contrastText
+                          background: theme.palette.primary.dark
                         }}
                       >
                         <Box>
