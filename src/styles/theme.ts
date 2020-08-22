@@ -4,10 +4,10 @@ import { KeyboardArrowDown } from '@material-ui/icons'
 const custom = {
   primaryMinus: '#04daf4',
   primary: '#0199fe',
-  primaryPlus: '#263595',
+  primaryPlus: '#3449d6',
   primaryContrast: '#0d093b',
   secondaryMinus: '#ff984b',
-  secondary: '#ff7f1f',
+  secondary: '#ff0000',
   secondaryPlus: '#b25815',
   secondaryContrast: '#fff',
   brown: '#411e20'

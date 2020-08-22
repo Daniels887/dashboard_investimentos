@@ -6,6 +6,7 @@ import { Grid, Box } from '@material-ui/core'
 import MenuDashboard from './components/Menu'
 import Header from './components/Header'
 import Infos from './components/Infos'
+import TabsDashboard from './components/Tabs'
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
             <Box>
               <Header />
               <Infos />
+              <TabsDashboard />
             </Box>
           </Grid>
         </Grid>
