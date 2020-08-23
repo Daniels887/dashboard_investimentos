@@ -30,7 +30,11 @@ const MyIcon = withStyles({
   }
 })(AccountBalanceWalletOutlined)
 
-const TabsDashboard: React.FC = () => {
+interface IProps {
+  showValues: boolean
+}
+
+const TabsDashboard: React.FC<IProps> = ({ showValues }) => {
   const matches = useMediaQuery(theme.breakpoints.up('md'))
   const [value, setValue] = useState(0)
 
@@ -97,7 +101,7 @@ const TabsDashboard: React.FC = () => {
       </Box>
       <Box>
         <TabPanel value={value} index={0}>
-          <Resume />
+          <Resume showValues={showValues} />
         </TabPanel>
         <TabPanel value={value} index={1}>
           <div>Item Two</div>

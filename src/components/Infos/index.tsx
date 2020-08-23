@@ -1,7 +1,11 @@
 import React from 'react'
 import { Box, Typography, Grid } from '@material-ui/core'
 
-const Infos: React.FC = () => {
+interface IProps {
+  showValues: boolean
+}
+
+const Infos: React.FC<IProps> = ({ showValues }) => {
   return (
     <Box m={2} ml={{ xs: 0, md: 4 }} textAlign={{ xs: 'center', md: 'left' }}>
       <Grid container>
@@ -11,7 +15,13 @@ const Infos: React.FC = () => {
               Saldo em conta corrente
             </Typography>
             <Box color="grey.600" mt={1}>
-              <Typography variant="h5">R$ 5.620.080,85</Typography>
+              {showValues ? (
+                <Typography variant="h5">R$ 5.620.080,85</Typography>
+              ) : (
+                <Typography variant="h5">
+                  R$ &#9679; &#9679; &#9679; &#9679; &#9679;
+                </Typography>
+              )}
             </Box>
           </Box>
         </Grid>
@@ -21,7 +31,13 @@ const Infos: React.FC = () => {
               Disponível para investir
             </Typography>
             <Box color="grey.600" mt={1}>
-              <Typography variant="h5">R$ 10.000.000,00</Typography>
+              {showValues ? (
+                <Typography variant="h5">R$ 10.000.000,00</Typography>
+              ) : (
+                <Typography variant="h5">
+                  R$ &#9679; &#9679; &#9679; &#9679; &#9679;
+                </Typography>
+              )}
             </Box>
           </Box>
         </Grid>
@@ -31,7 +47,13 @@ const Infos: React.FC = () => {
               Patrimônio total:
             </Typography>
             <Box color="grey.600" mt={1}>
-              <Typography variant="h5">R$ 10.000.000,00</Typography>
+              {showValues ? (
+                <Typography variant="h5">R$ 10.000.000,00</Typography>
+              ) : (
+                <Typography variant="h5">
+                  R$ &#9679; &#9679; &#9679; &#9679; &#9679;
+                </Typography>
+              )}
             </Box>
           </Box>
         </Grid>

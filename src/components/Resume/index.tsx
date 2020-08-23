@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import {
   Box,
   Grid,
@@ -23,7 +23,11 @@ const MyPaper = withStyles({
   }
 })(Paper)
 
-const Resume: React.FC = () => {
+interface IProps {
+  showValues: boolean
+}
+
+const Resume: React.FC<IProps> = ({ showValues }) => {
   const matches = useMediaQuery(theme.breakpoints.up('md'))
 
   const data = [
@@ -107,9 +111,15 @@ const Resume: React.FC = () => {
                   textAlign="center"
                   style={{ borderColor: theme.palette.grey[400] }}
                 >
-                  <Typography style={{ fontWeight: 'bold' }} variant="h6">
-                    R$ 44.000, 00
-                  </Typography>
+                  {showValues ? (
+                    <Typography style={{ fontWeight: 'bold' }} variant="h6">
+                      R$ 44.000, 00
+                    </Typography>
+                  ) : (
+                    <Typography style={{ fontWeight: 'bold' }} variant="h6">
+                      R$ &#9679; &#9679; &#9679; &#9679; &#9679;
+                    </Typography>
+                  )}
                   <Box mt={1}>
                     <Typography>22 ATIVOS</Typography>
                   </Box>
@@ -238,6 +248,62 @@ const Resume: React.FC = () => {
             </Box>
           </Paper>
         </Box>
+      </Grid>
+      <Grid item xs={12} lg={8}>
+        <Grid container>
+          <Grid item xs={12} lg={6}>
+            <Box width={1} pt={4}>
+              <Paper elevation={3}>
+                <Box p={3} display="flex" alignItems="flex-end">
+                  <Box width={0.2} color="grey.500">
+                    <Typography style={{ fontWeight: 'bold' }}>
+                      Rentabilidade na carteira
+                    </Typography>
+                    <Typography style={{ fontSize: 12 }}>
+                      Versão beta
+                    </Typography>
+                  </Box>
+                  <Box color="grey.600" ml={2}>
+                    <Typography style={{ fontWeight: 'bold' }}>
+                      no mês
+                    </Typography>
+                    <Typography
+                      style={{ color: '#32CD32', fontWeight: 'bold' }}
+                    >
+                      + 0,50%
+                    </Typography>
+                  </Box>
+                  <Box color="grey.600" ml={2}>
+                    <Typography style={{ fontWeight: 'bold' }}>
+                      no ano
+                    </Typography>
+                    <Typography
+                      style={{
+                        color: theme.palette.secondary.main,
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      - 9,75%
+                    </Typography>
+                  </Box>
+                  <Box color="grey.600" ml={2}>
+                    <Typography style={{ fontWeight: 'bold' }}>
+                      12 meses
+                    </Typography>
+                    <Typography
+                      style={{
+                        color: theme.palette.secondary.main,
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      - 5,42%
+                    </Typography>
+                  </Box>
+                </Box>
+              </Paper>
+            </Box>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   )

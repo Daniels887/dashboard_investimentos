@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Dispatch, SetStateAction, useEffect } from 'react'
 import {
   Box,
   InputBase,
@@ -47,7 +47,12 @@ const StyledButton = withStyles({
   }
 })(Button)
 
-const Header: React.FC = () => {
+interface IProps {
+  setShowValues: Dispatch<SetStateAction<boolean>>
+  showValues: boolean
+}
+
+const Header: React.FC<IProps> = ({ setShowValues, showValues }) => {
   const matches = useMediaQuery(theme.breakpoints.up('md'))
 
   return (
@@ -105,7 +110,7 @@ const Header: React.FC = () => {
                     pl={3}
                   >
                     ESCONDER VALORES
-                    <IconButton>
+                    <IconButton onClick={() => setShowValues(!showValues)}>
                       <MyIcon />
                     </IconButton>
                   </Box>

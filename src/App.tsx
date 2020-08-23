@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { hot } from 'react-hot-loader/root'
 import theme from './styles/theme'
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
@@ -9,6 +9,8 @@ import Infos from './components/Infos'
 import TabsDashboard from './components/Tabs'
 
 const App: React.FC = () => {
+  const [showValues, setShowValues] = useState(false)
+
   return (
     <>
       <MuiThemeProvider theme={theme}>
@@ -19,9 +21,9 @@ const App: React.FC = () => {
           </Grid>
           <Grid item xs={12} md={10} lg={11}>
             <Box>
-              <Header />
-              <Infos />
-              <TabsDashboard />
+              <Header setShowValues={setShowValues} showValues={showValues} />
+              <Infos showValues={showValues} />
+              <TabsDashboard showValues={showValues} />
             </Box>
           </Grid>
         </Grid>
