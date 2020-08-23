@@ -38,6 +38,8 @@ const StyledButton = withStyles({
     background: theme.palette.primary.contrastText,
     borderTopLeftRadius: 32,
     borderBottomLeftRadius: 32,
+    borderTopRightRadus: 0,
+    borderBottomRightRadius: 0,
     border: 0,
     color: 'white',
     height: 48,

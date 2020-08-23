@@ -62,7 +62,7 @@ const TabsDashboard: React.FC = () => {
             label="Resumo"
             id="simple-tab-0"
             aria-controls="simple-tabpanel-0"
-            style={{ marginLeft: matches ? 16 : 8 }}
+            style={{ marginLeft: matches ? 0 : 8 }}
           />
           <MyTab
             label="Movimentações"
