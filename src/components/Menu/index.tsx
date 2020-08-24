@@ -203,7 +203,7 @@ const MenuDashboard: React.FC = () => {
         </>
       ) : (
         <Box
-          height={{ sm: '100%', md: '100vh' }}
+          height={{ md: 1, lg: '100vh' }}
           bgcolor="primary.contrastText"
           display="flex"
           flexDirection="column"
