@@ -16,6 +16,7 @@ import {
   NotificationsNone
 } from '@material-ui/icons'
 import theme from '../../styles/theme'
+import { useSelector } from '../../store'
 
 const MyMenuItem = withStyles({
   root: {
@@ -58,6 +59,7 @@ const MenuDashboard: React.FC = () => {
   const matches = useMediaQuery(theme.breakpoints.up('md'))
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
+  const user = useSelector((state) => state.user)
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
@@ -131,8 +133,8 @@ const MenuDashboard: React.FC = () => {
                     </Box>
                   </Avatar>
                   <Box fontSize={10} ml={1}>
-                    <Box>Andreia</Box>
-                    <Box>CC 16289-9</Box>
+                    <Box>{user.name}</Box>
+                    <Box>{user.cc}</Box>
                   </Box>
                 </Box>
               </MenuItem>
