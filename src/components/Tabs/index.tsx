@@ -104,13 +104,19 @@ const TabsDashboard: React.FC<IProps> = ({ showValues }) => {
           <Resume showValues={showValues} />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <div>Item Two</div>
+          <Box width={1} height="80vh">
+            Movimentações
+          </Box>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <div>Item Three</div>
+          <Box width={1} height="80vh">
+            Posição
+          </Box>
         </TabPanel>
         <TabPanel value={value} index={3}>
-          <div>Item Four</div>
+          <Box width={1} height="80vh">
+            Saque
+          </Box>
         </TabPanel>
       </Box>
     </>
