@@ -1,10 +1,5 @@
-<h3 align="center">
-  <img src="https://user-images.githubusercontent.com/58083563/89603242-1845fa80-d83f-11ea-9ca1-3b6c3acb57ed.png" alt="Webpack" width="150" />&nbsp&nbsp&nbsp&nbsp
-  &nbsp
-  <img src="https://user-images.githubusercontent.com/58083563/89603440-87bbea00-d83f-11ea-88f1-40ded3561784.png" alt="Typescript" width="150" />
-  <img src="https://user-images.githubusercontent.com/58083563/89603314-3f9cc780-d83f-11ea-974a-82f2ed7ab879.png" alt="React" width="200" />
-</h3>
-<h3 align="center">Boilerplate - React + Typescript + Webpack</h3>
+
+<h3 align="center">Teste Sciensa</h3>
 <br>
 <p align="center">
   <a href="#rocket-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -26,6 +21,9 @@
 - [Prettier](https://prettier.io/)
 - [Commitizen](https://github.com/commitizen/cz-cli)
 - [Husky](https://github.com/typicode/husky)
+- [Material-ui](https://material-ui.com/)
+- [Redux](https://redux.js.org/)
+- [React-Test-Renderer](https://www.npmjs.com/package/react-test-renderer)
 
 ## :wrench: Configuration
 
