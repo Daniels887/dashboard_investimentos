@@ -23,7 +23,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
         display="flex"
         flexDirection={{ xs: 'column', md: 'column', lg: 'row' }}
       >
-        <Box width={{ md: 1, lg: 0.2 }}>
+        <Box width={{ md: 1, lg: 0.2 }} mb={{ xs: 2, md: 0 }}>
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
               <Box
@@ -92,7 +92,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
         <Box
           width={{ md: 1, lg: 0.2 }}
           ml={{ md: 0, lg: 2 }}
-          mt={{ xs: 2, lg: 0 }}
+          mb={{ xs: 2, md: 0 }}
         >
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
@@ -162,7 +162,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
         <Box
           width={{ md: 1, lg: 0.2 }}
           ml={{ md: 0, lg: 2 }}
-          mt={{ xs: 2, lg: 0 }}
+          mb={{ xs: 2, md: 0 }}
         >
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
@@ -229,10 +229,11 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
             </Box>
           </Paper>
         </Box>
+
         <Box
           width={{ md: 1, lg: 0.2 }}
           ml={{ md: 0, lg: 2 }}
-          mt={{ xs: 2, lg: 0 }}
+          mb={{ xs: 2, md: 0 }}
         >
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
@@ -299,11 +300,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
             </Box>
           </Paper>
         </Box>
-        <Box
-          width={{ md: 1, lg: 0.2 }}
-          ml={{ md: 0, lg: 2 }}
-          mt={{ xs: 2, lg: 0 }}
-        >
+        <Box width={{ md: 1, lg: 0.2 }} ml={{ md: 0, lg: 2 }}>
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
               <Box

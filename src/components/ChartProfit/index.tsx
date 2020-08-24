@@ -189,7 +189,7 @@ const ChartProfit: React.FC = () => {
                   <InfoOutlined />
                 </IconButton>
               </Box>
-              <Box>
+              <Box mr={{ xs: 0, md: 2 }}>
                 <Button variant="text" style={{ marginLeft: 0, padding: 0 }}>
                   <Box
                     p={1}
@@ -197,7 +197,6 @@ const ChartProfit: React.FC = () => {
                     borderRadius={16}
                     boxShadow={4}
                     style={{ textTransform: 'none' }}
-                    mr={2}
                     fontWeight="bold"
                   >
                     Conheça o Gorila Connect
