@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Infos renders correctly 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-1"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-2"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Saldo em conta corrente
+        </p>
+        <div
+          className="MuiBox-root MuiBox-root-3"
+          id="sale-hide"
+        >
+          <h5
+            className="MuiTypography-root MuiTypography-h5"
+          >
+            R$ 
+            5.620.080,85
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-4"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Disponível para investir
+        </p>
+        <div
+          className="MuiBox-root MuiBox-root-5"
+          id="available-hide"
+        >
+          <h5
+            className="MuiTypography-root MuiTypography-h5"
+          >
+            R$ 
+            10.000.000,00
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-6"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Patrimônio total:
+        </p>
+        <div
+          className="MuiBox-root MuiBox-root-7"
+          id="patrimony-hide"
+        >
+          <h5
+            className="MuiTypography-root MuiTypography-h5"
+          >
+            R$ 
+            10.000.000,00
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -112,7 +112,10 @@ const Header: React.FC<IProps> = ({ setShowValues, showValues }) => {
                     pl={3}
                   >
                     ESCONDER VALORES
-                    <IconButton onClick={() => setShowValues(!showValues)}>
+                    <IconButton
+                      onClick={() => setShowValues(!showValues)}
+                      id="hide-values"
+                    >
                       <MyIcon />
                     </IconButton>
                   </Box>

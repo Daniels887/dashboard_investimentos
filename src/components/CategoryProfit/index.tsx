@@ -8,7 +8,7 @@ interface IProps {
 
 const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
   return (
-    <Box pl={4} pr={4}>
+    <Box pl={4} pr={4} mb={5} pb={5}>
       <Box color="grey.500" display="flex" alignItems="baseline">
         <Typography style={{ fontWeight: 'bold' }}>
           Rentabilidade por categoria
@@ -92,7 +92,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
         <Box
           width={{ md: 1, lg: 0.2 }}
           ml={{ md: 0, lg: 2 }}
-          mt={{ md: 2, lg: 0 }}
+          mt={{ xs: 2, lg: 0 }}
         >
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
@@ -162,7 +162,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
         <Box
           width={{ md: 1, lg: 0.2 }}
           ml={{ md: 0, lg: 2 }}
-          mt={{ md: 2, lg: 0 }}
+          mt={{ xs: 2, lg: 0 }}
         >
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
@@ -232,7 +232,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
         <Box
           width={{ md: 1, lg: 0.2 }}
           ml={{ md: 0, lg: 2 }}
-          mt={{ md: 2, lg: 0 }}
+          mt={{ xs: 2, lg: 0 }}
         >
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>
@@ -302,7 +302,7 @@ const CategoryProfit: React.FC<IProps> = ({ showValues }) => {
         <Box
           width={{ md: 1, lg: 0.2 }}
           ml={{ md: 0, lg: 2 }}
-          mt={{ md: 2, lg: 0 }}
+          mt={{ xs: 2, lg: 0 }}
         >
           <Paper elevation={3}>
             <Box p={2} mr={{ md: 2, lg: 0 }}>

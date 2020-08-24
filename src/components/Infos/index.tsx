@@ -17,7 +17,7 @@ const Infos: React.FC<IProps> = ({ showValues }) => {
             <Typography style={{ fontWeight: 'bold' }}>
               Saldo em conta corrente
             </Typography>
-            <Box color="grey.600" mt={1}>
+            <Box color="grey.600" mt={1} id="sale-hide">
               {showValues ? (
                 <Typography variant="h5">R$ {user.sale}</Typography>
               ) : (
@@ -33,7 +33,7 @@ const Infos: React.FC<IProps> = ({ showValues }) => {
             <Typography style={{ fontWeight: 'bold' }}>
               Disponível para investir
             </Typography>
-            <Box color="grey.600" mt={1}>
+            <Box color="grey.600" mt={1} id="available-hide">
               {showValues ? (
                 <Typography variant="h5">R$ {user.available}</Typography>
               ) : (
@@ -49,7 +49,7 @@ const Infos: React.FC<IProps> = ({ showValues }) => {
             <Typography style={{ fontWeight: 'bold' }}>
               Patrimônio total:
             </Typography>
-            <Box color="grey.600" mt={1}>
+            <Box color="grey.600" mt={1} id="patrimony-hide">
               {showValues ? (
                 <Typography variant="h5">R$ {user.patrimony}</Typography>
               ) : (
