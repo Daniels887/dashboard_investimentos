@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core'
 import { PieChart, Tooltip, Pie, Cell } from 'recharts'
 import theme from '../../styles/theme'
+import { useSelector } from '../../store'
 
 const MyPaper = withStyles({
   root: {
@@ -28,14 +29,7 @@ interface IProps {
 
 const Wallet: React.FC<IProps> = ({ showValues }) => {
   const matches = useMediaQuery(theme.breakpoints.up('md'))
-
-  const data = [
-    { name: 'Tesouro', assets: 2, value: 'R$ 4.000,00 | 10%' },
-    { name: 'Previdência', assets: 5, value: 'R$ 10.000,00 | 1%%' },
-    { name: 'Ações/Futuros', assets: 5, value: 'R$ 10.000,00 | 15%' },
-    { name: 'Renda Fixa', assets: 5, value: 'R$ 10.000,00 | 15%' },
-    { name: 'Fundos', assets: 5, value: 'R$ 10.000,00 | 15%' }
-  ]
+  const data = useSelector((state) => state.wallet)
 
   const COLORS = [
     theme.palette.grey[400],
@@ -84,13 +78,13 @@ const Wallet: React.FC<IProps> = ({ showValues }) => {
               wrapperStyle={{ zIndex: 1500, float: 'right' }}
             />
             <Pie
-              data={data}
+              data={data.wallet}
               innerRadius={matches ? 128 : 100}
               dataKey="assets"
               startAngle={60}
               endAngle={420}
             >
-              {data.map((entry, index) => (
+              {data.wallet.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
@@ -108,7 +102,7 @@ const Wallet: React.FC<IProps> = ({ showValues }) => {
             >
               {showValues ? (
                 <Typography style={{ fontWeight: 'bold' }} variant="h6">
-                  R$ 44.000, 00
+                  R$ {data.total}
                 </Typography>
               ) : (
                 <Typography style={{ fontWeight: 'bold' }} variant="h6">

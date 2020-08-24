@@ -19,6 +19,7 @@ import {
   Line
 } from 'recharts'
 import { InfoOutlined } from '@material-ui/icons'
+import { useSelector } from '../../store'
 
 const MyBox = withStyles({
   root: {
@@ -46,18 +47,7 @@ const MyBox = withStyles({
 })(Box)
 
 const ChartProfit: React.FC = () => {
-  const data = [
-    { name: 'jan', carteira: 1.0, ipca: 1.5, cdi: 1.0 },
-    { name: 'fev', carteira: 2.0, ipca: 2.0, cdi: 1.5 },
-    { name: 'mar', carteira: 3.5, ipca: 2.5, cdi: 3.5 },
-    { name: 'abr', carteira: 2.5, ipca: 3.0, cdi: 2.5 },
-    { name: 'jun', carteira: 1.5, ipca: 1.0, cdi: 2.0 },
-    { name: 'ago', carteira: 3.0, ipca: 3.5, cdi: 3.0 },
-    { name: 'set', carteira: 4.0, ipca: 2.5, cdi: 4.5 },
-    { name: 'out', carteira: 4.5, ipca: 4.0, cdi: 4.0 },
-    { name: 'nov', carteira: 3.5, ipca: 4.5, cdi: 2.5 },
-    { name: 'dez', carteira: 2.5, ipca: 2.5, cdi: 5.0 }
-  ]
+  const wallet = useSelector((state) => state.wallet)
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active) {
@@ -228,7 +218,7 @@ const ChartProfit: React.FC = () => {
             pr={3}
           >
             <ResponsiveContainer width="100%" height={218}>
-              <LineChart data={data}>
+              <LineChart data={wallet.profitability}>
                 <XAxis dataKey="name" tickLine={false} tickMargin={10} />
                 <YAxis
                   type="number"

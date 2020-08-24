@@ -1,11 +1,14 @@
 import React from 'react'
 import { Box, Typography, Grid } from '@material-ui/core'
+import { useSelector } from '../../store'
 
 interface IProps {
   showValues: boolean
 }
 
 const Infos: React.FC<IProps> = ({ showValues }) => {
+  const user = useSelector((state) => state.user)
+
   return (
     <Box m={2} ml={{ xs: 0, md: 4 }} textAlign={{ xs: 'center', md: 'left' }}>
       <Grid container>
@@ -16,7 +19,7 @@ const Infos: React.FC<IProps> = ({ showValues }) => {
             </Typography>
             <Box color="grey.600" mt={1}>
               {showValues ? (
-                <Typography variant="h5">R$ 5.620.080,85</Typography>
+                <Typography variant="h5">R$ {user.sale}</Typography>
               ) : (
                 <Typography variant="h5">
                   R$ &#9679; &#9679; &#9679; &#9679; &#9679;
@@ -32,7 +35,7 @@ const Infos: React.FC<IProps> = ({ showValues }) => {
             </Typography>
             <Box color="grey.600" mt={1}>
               {showValues ? (
-                <Typography variant="h5">R$ 10.000.000,00</Typography>
+                <Typography variant="h5">R$ {user.available}</Typography>
               ) : (
                 <Typography variant="h5">
                   R$ &#9679; &#9679; &#9679; &#9679; &#9679;
@@ -48,7 +51,7 @@ const Infos: React.FC<IProps> = ({ showValues }) => {
             </Typography>
             <Box color="grey.600" mt={1}>
               {showValues ? (
-                <Typography variant="h5">R$ 10.000.000,00</Typography>
+                <Typography variant="h5">R$ {user.patrimony}</Typography>
               ) : (
                 <Typography variant="h5">
                   R$ &#9679; &#9679; &#9679; &#9679; &#9679;

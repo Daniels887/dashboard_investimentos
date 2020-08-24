@@ -18,6 +18,7 @@ import {
   PowerSettingsNew
 } from '@material-ui/icons'
 import theme from '../../styles/theme'
+import { useSelector } from '../../store'
 
 const MyIcon = withStyles({
   root: {
@@ -54,6 +55,7 @@ interface IProps {
 
 const Header: React.FC<IProps> = ({ setShowValues, showValues }) => {
   const matches = useMediaQuery(theme.breakpoints.up('md'))
+  const user = useSelector((state) => state.user)
 
   return (
     <>
@@ -141,8 +143,8 @@ const Header: React.FC<IProps> = ({ setShowValues, showValues }) => {
                         </Box>
                       </Avatar>
                       <Box fontSize={10} ml={1}>
-                        <Box>Andreia</Box>
-                        <Box>CC 16289-9</Box>
+                        <Box>{user.name}</Box>
+                        <Box>{user.cc}</Box>
                       </Box>
                     </Box>
                   </>
