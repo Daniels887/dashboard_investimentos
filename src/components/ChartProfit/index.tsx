@@ -223,7 +223,7 @@ const ChartProfit: React.FC = () => {
             position="relative"
             style={{ fontWeight: 'bold' }}
             alignItems="center"
-            mt={4}
+            mt={3}
             pl={1}
             pr={3}
           >
@@ -290,7 +290,7 @@ const ChartProfit: React.FC = () => {
             flexDirection={{ xs: 'column', md: 'row' }}
             justifyContent={{ xs: 'center', md: 'space-between' }}
             alignItems={{ xs: 'center', md: 'flex-end' }}
-            pb={3}
+            pb={2}
           >
             <Box
               display="flex"

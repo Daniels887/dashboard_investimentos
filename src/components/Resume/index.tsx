@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core'
 import Wallet from '../Wallet'
 import Profitability from '../Profitability'
 import ChartProfit from '../ChartProfit'
+import CategoryProfit from '../CategoryProfit'
 
 interface IProps {
   showValues: boolean
@@ -24,6 +25,9 @@ const Resume: React.FC<IProps> = ({ showValues }) => {
             <ChartProfit />
           </Grid>
         </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <CategoryProfit showValues={showValues} />
       </Grid>
     </Grid>
   )

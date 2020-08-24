@@ -128,7 +128,7 @@ const Wallet: React.FC<IProps> = ({ showValues }) => {
           display="flex"
           flexDirection={{ xs: 'column', md: 'row' }}
           justifyContent="center"
-          mb={5}
+          mb={3}
         >
           <Box
             display="flex"
