@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/58083563/92058215-8fe74680-ed65-11ea-9e7a-3e24057a74d7.png" alt="Dashboard" />
 
-<h3 align="center">Dashboard sobre investimentos</h3>
+<h3 align="center">Estudo de UI</h3>
 <br>
 <p align="center">
   <a href="#rocket-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
